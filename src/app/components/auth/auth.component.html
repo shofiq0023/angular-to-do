@@ -1,0 +1,16 @@
+<div class="text-center mt-5">
+    <h2>Sign in</h2>
+    <button nbButton hero status="danger" (click)="googleLogin()" [nbSpinner]="loading" nbSpinnerStatus="primary">
+        <span class="me-2">
+            <fa-icon [icon]="faGoogle"></fa-icon>
+        </span> Login with Google
+    </button>
+    <p class="text-danger pt-3">{{errMsg}}</p>
+    
+    <button nbButton hero status="primary" routerLink="home">
+        <span class="me-2">
+            <nb-icon icon="wifi-off-outline"></nb-icon>
+        </span>
+        Offline
+    </button>
+</div>

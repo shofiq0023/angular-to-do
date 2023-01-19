@@ -1,0 +1,21 @@
+<button *ngIf="fireAuth.currentUser" nbButton hero status="danger" (click)="logout()">Log out</button>
+<button *ngIf="!fireAuth.currentUser" nbButton hero status="primary" routerLink="/" class="mb-2">Login</button>
+
+<nb-card>
+    <nb-card-body>
+        <h2>Add Task:</h2>
+        <form>
+            <input type="text" nbInput fullWidth status="basic" placeholder="Add your task..." class="my-2">
+            <input type="submit" nbButton status="success" value="Submit" class="my-2">
+        </form>
+    </nb-card-body>
+</nb-card>
+
+<nb-tabset fullWidth>
+    <nb-tab tabTitle="To-do">
+        <app-task *ngFor="let todo of tasks" [task]="todo.taskDesc"></app-task>
+    </nb-tab>
+    <nb-tab tabTitle="Finished">
+        
+    </nb-tab>
+</nb-tabset>

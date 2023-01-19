@@ -1,0 +1,15 @@
+<div class="tasks bg-dark p-3 rounded shadow mb-3">
+    <div class="row align-items-center">
+        <div class="col-1">
+            <nb-checkbox (checkedChange)="toggle($event)"></nb-checkbox>
+        </div>
+        <div class="col-9">
+            <h5 [ngClass]="{'done': checked}">{{task}}</h5>
+        </div>
+        <div class="col-2 text-center">
+            <button nbButton hero status="danger">
+                <nb-icon icon="trash-2-outline"></nb-icon>
+            </button>
+        </div>
+    </div>
+</div>
